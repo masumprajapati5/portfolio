@@ -1426,7 +1426,7 @@ body {
   }
 
   .toggle-stage {
-    height: 200px
+    height: 260px; /* Increased from 200px */
   }
 
   .tab-btn {
@@ -1446,12 +1446,14 @@ body {
   }
 
   .toggle-content h1 {
-    font-size: 36px
+    font-size: 28px; /* Reduced from 36px for better mobile fit */
+    line-height: 1.2;
   }
 
   .toggle-content p {
-    font-size: 15px;
-    margin-top: 25px
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0 10px;
   }
 
   .threebox-container {

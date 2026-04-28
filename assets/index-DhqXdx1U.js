@@ -24,8 +24,8 @@ Error generating stack: `+i.message+`
 
         .lg-nav {
           pointer-events: auto;
-          width: 100%;
-          max-width: 80vw;   /* 80% of viewport on desktop */
+          width: 90%;
+          max-width: 1200px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -183,7 +183,11 @@ Error generating stack: `+i.message+`
 .sm-scope .staggered-menu-header::before {
   content: '';
   position: absolute;
-  inset: 10px 5%;              /* matches header padding */
+  inset: 10px 0;
+  max-width: 1200px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 100px;
   background: rgba(255,255,255,0.22);
   backdrop-filter: blur(28px) saturate(200%);
@@ -416,7 +420,7 @@ Error generating stack: `+i.message+`
 /* ---- Socials ---- */
 .sm-scope .sm-socials {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -802,4 +806,4 @@ Error generating stack: `+i.message+`
           .proj-stats { grid-template-columns: repeat(2, 1fr); }
           .proj-img   { height: 160px; }
         }
-      `}),n&&q.jsx(p2,{color:n.color,onClose:()=>r(null)})]})},g2=it.lazy(()=>Oi(()=>import("./Skills-D9Gz4d-h.js"),[])),_2=it.lazy(()=>Oi(()=>import("./WebsiteCreate-CshLykov.js"),[])),v2=it.lazy(()=>Oi(()=>import("./DesignCode-yWHzwPEi.js"),[])),y2=it.lazy(()=>Oi(()=>import("./ThreeBox-BDIAUUkY.js"),[])),b2=it.lazy(()=>Oi(()=>import("./About-DOi9avf9.js"),[])),S2=it.lazy(()=>Oi(()=>import("./Gallery-hcgLbGlP.js"),[])),x2=it.lazy(()=>Oi(()=>import("./LetsWork-cDNZPpqg.js"),[])),T2=it.lazy(()=>Oi(()=>import("./Contact-aaf3UK6o.js"),[])),E2=it.lazy(()=>Oi(()=>import("./Footer-CvqmMOfX.js"),[])),E_=()=>q.jsx("div",{"aria-hidden":"true"}),z2=[{label:"Home",ariaLabel:"Go to home section",link:"#home"},{label:"Skills",ariaLabel:"Go to skills section",link:"#skills"},{label:"About",ariaLabel:"Go to about section",link:"#about"},{label:"Projects",ariaLabel:"Go to projects section",link:"#projects"},{label:"Contact",ariaLabel:"Get in touch",link:"#contact"}],M2=[{label:"GitHub",link:"https://github.com"},{label:"LinkedIn",link:"https://linkedin.com"},{label:"Twitter",link:"https://twitter.com"}];function A2(){const[f,n]=it.useState(!0),r=it.useCallback(()=>n(!1),[]);return it.useEffect(()=>{const a=new Tb({duration:1.2,easing:h=>Math.min(1,1.001-Math.pow(2,-10*h)),smooth:!0});let u;const c=h=>{a.raf(h),u=requestAnimationFrame(c)};return u=requestAnimationFrame(c),()=>{cancelAnimationFrame(u),a.destroy()}},[]),q.jsxs(q.Fragment,{children:[f&&q.jsx(KS,{onComplete:r}),q.jsx(VS,{}),q.jsx(QS,{position:"right",items:z2,socialItems:M2,displaySocials:!0,displayItemNumbering:!0,colors:["#35b04b","#2d9340"],accentColor:"#35b04b",isFixed:!0}),q.jsx(ZS,{}),q.jsxs(it.Suspense,{fallback:q.jsx(E_,{}),children:[q.jsx(g2,{}),q.jsx(_2,{}),q.jsx(v2,{}),q.jsx(y2,{}),q.jsx(b2,{})]}),q.jsx(m2,{}),q.jsxs(it.Suspense,{fallback:q.jsx(E_,{}),children:[q.jsx(S2,{}),q.jsx(x2,{}),q.jsx(T2,{}),q.jsx(E2,{})]})]})}hb.createRoot(document.getElementById("root")).render(q.jsx(it.StrictMode,{children:q.jsx(A2,{})}));export{jt as g,q as j,it as r};
+      `}),n&&q.jsx(p2,{color:n.color,onClose:()=>r(null)})]})},g2=it.lazy(()=>Oi(()=>import("./Skills-BBlAWMYf.js"),[])),_2=it.lazy(()=>Oi(()=>import("./WebsiteCreate-D6uTdI5m.js"),[])),v2=it.lazy(()=>Oi(()=>import("./DesignCode-CBSPfYkV.js"),[])),y2=it.lazy(()=>Oi(()=>import("./ThreeBox-BiEe0xbE.js"),[])),b2=it.lazy(()=>Oi(()=>import("./About-D0hoGLqY.js"),[])),S2=it.lazy(()=>Oi(()=>import("./Gallery-BiAtMTOj.js"),[])),x2=it.lazy(()=>Oi(()=>import("./LetsWork-DVuEZ6it.js"),[])),T2=it.lazy(()=>Oi(()=>import("./Contact-BQKa76G1.js"),[])),E2=it.lazy(()=>Oi(()=>import("./Footer-IfTF1IkM.js"),[])),E_=()=>q.jsx("div",{"aria-hidden":"true"}),z2=[{label:"Home",ariaLabel:"Go to home section",link:"#home"},{label:"Skills",ariaLabel:"Go to skills section",link:"#skills"},{label:"About",ariaLabel:"Go to about section",link:"#about"},{label:"Projects",ariaLabel:"Go to projects section",link:"#projects"},{label:"Contact",ariaLabel:"Get in touch",link:"#contact"}],M2=[{label:"GitHub",link:"https://github.com"},{label:"LinkedIn",link:"https://linkedin.com"},{label:"Twitter",link:"https://twitter.com"}];function A2(){const[f,n]=it.useState(!0),r=it.useCallback(()=>n(!1),[]);return it.useEffect(()=>{const a=new Tb({duration:1.2,easing:h=>Math.min(1,1.001-Math.pow(2,-10*h)),smooth:!0});let u;const c=h=>{a.raf(h),u=requestAnimationFrame(c)};return u=requestAnimationFrame(c),()=>{cancelAnimationFrame(u),a.destroy()}},[]),q.jsxs(q.Fragment,{children:[f&&q.jsx(KS,{onComplete:r}),q.jsx(VS,{}),q.jsx(QS,{position:"right",items:z2,socialItems:M2,displaySocials:!0,displayItemNumbering:!0,colors:["#35b04b","#2d9340"],accentColor:"#35b04b",isFixed:!0}),q.jsx(ZS,{}),q.jsxs(it.Suspense,{fallback:q.jsx(E_,{}),children:[q.jsx(g2,{}),q.jsx(_2,{}),q.jsx(v2,{}),q.jsx(y2,{}),q.jsx(b2,{})]}),q.jsx(m2,{}),q.jsxs(it.Suspense,{fallback:q.jsx(E_,{}),children:[q.jsx(S2,{}),q.jsx(x2,{}),q.jsx(T2,{}),q.jsx(E2,{})]})]})}hb.createRoot(document.getElementById("root")).render(q.jsx(it.StrictMode,{children:q.jsx(A2,{})}));export{jt as g,q as j,it as r};

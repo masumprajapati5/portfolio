@@ -517,7 +517,11 @@ export const StaggeredMenu = ({
 .sm-scope .staggered-menu-header::before {
   content: '';
   position: absolute;
-  inset: 10px 5%;              /* matches header padding */
+  inset: 10px 0;
+  max-width: 1200px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 100px;
   background: rgba(255,255,255,0.22);
   backdrop-filter: blur(28px) saturate(200%);
@@ -750,7 +754,7 @@ export const StaggeredMenu = ({
 /* ---- Socials ---- */
 .sm-scope .sm-socials {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

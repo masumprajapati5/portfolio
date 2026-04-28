@@ -124,25 +124,24 @@ const Projects = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // No more sticky stacking — just a normal clean list
       const panels = gsap.utils.toArray('.proj-slide')
-      
-      // Only pin on screens wider than 768px
-      if (window.innerWidth > 768) {
-        panels.slice(0, -1).forEach((panel) => {
-          gsap.timeline({
+      panels.forEach((panel) => {
+        gsap.fromTo(panel, 
+          { y: 50, opacity: 0 }, 
+          { 
+            y: 0, 
+            opacity: 1, 
+            duration: 0.8, 
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: panel,
-              start: 'bottom bottom',
-              end: 'bottom top',
-              pinSpacing: false,
-              pin: true,
-              scrub: true,
-            },
-          })
-            .fromTo(panel, { scale: 1, opacity: 1 }, { scale: 0.86, opacity: 0.55, duration: 0.9, ease: 'none' })
-            .to(panel, { opacity: 0, duration: 0.1, ease: 'none' })
-        })
-      }
+              start: 'top 85%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        )
+      })
     }, wrapperRef)
 
     // Recalculate pin positions after lazy siblings above have mounted & painted
@@ -252,12 +251,13 @@ const Projects = () => {
         /* ─── Slide ─── */
         .proj-slide {
           width: 100%;
-          height: calc(100vh - 80px);
+          min-height: 480px;
           background: #fff;
           border-radius: 24px;
           overflow: hidden;
-          box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-          margin-bottom: 6px;
+          box-shadow: 0 10px 45px rgba(0,0,0,0.06);
+          border: 1px solid #f0f0f0;
+          margin-bottom: 60px;
           will-change: transform, opacity;
         }
 
@@ -265,7 +265,7 @@ const Projects = () => {
         .proj-inner {
           display: grid;
           grid-template-columns: 38% 62%;
-          height: 100%;
+          min-height: 480px;
         }
 
         /* ─── LEFT ─── */

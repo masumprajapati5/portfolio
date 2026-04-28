@@ -8,7 +8,7 @@ const About = () => {
       <h2>section who loves the web</h2>
       <div className="about-card">
         <div className="about-image">
-          <img src="images/abouttemp.png" alt="About" loading="lazy" decoding="async" />
+          <img src="images/abouttemp.png" alt="About" decoding="async" />
         </div>
         <div className="about-content">
           <h2>Turning ideas into reality.</h2>

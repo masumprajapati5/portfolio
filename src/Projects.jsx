@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 const projects = [
   {
     id: 1,
-    img: '/images/Sweetora.png',
+    img: 'images/Sweetora.png',
     title: 'Sweetora', subtitle: 'Online Sweet Shop',
     tags: ['React', 'Tailwind CSS', 'Express.js', 'Node.js'],
     year: '2024', role: 'Full Stack Developer',
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     id: 2,
-    img: '/images/stepX.png',
+    img: 'images/stepX.png',
     title: 'StepX', subtitle: 'Online Shoe Shop',
     tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     year: '2023', role: 'Frontend + Backend Developer',
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: 3,
-    img: '/images/portfolio.png',
+    img: 'images/portfolio.png',
     title: 'Portfolio', subtitle: 'Personal Website',
     tags: ['React', 'CSS', 'Vite', 'Web3Forms'],
     year: '2025', role: 'Designer & Developer',
@@ -168,7 +168,7 @@ const Projects = () => {
               {/* ── LEFT ── */}
               <div className="proj-left">
                 <span className="proj-num">0{i + 1}</span>
-                <img src={p.img} alt={p.title} className="proj-img" />
+                <img src={p.img} alt={p.title} className="proj-img" decoding="async" />
                 <div className="proj-left-body">
                   <h3 className="proj-title">{p.title}</h3>
                   <p className="proj-subtitle">{p.subtitle}</p>

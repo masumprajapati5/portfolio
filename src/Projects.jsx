@@ -125,20 +125,24 @@ const Projects = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray('.proj-slide')
-      panels.slice(0, -1).forEach((panel) => {
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: panel,
-            start: 'bottom bottom',
-            end: 'bottom top',
-            pinSpacing: false,
-            pin: true,
-            scrub: true,
-          },
+      
+      // Only pin on screens wider than 768px
+      if (window.innerWidth > 768) {
+        panels.slice(0, -1).forEach((panel) => {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: panel,
+              start: 'bottom bottom',
+              end: 'bottom top',
+              pinSpacing: false,
+              pin: true,
+              scrub: true,
+            },
+          })
+            .fromTo(panel, { scale: 1, opacity: 1 }, { scale: 0.86, opacity: 0.55, duration: 0.9, ease: 'none' })
+            .to(panel, { opacity: 0, duration: 0.1, ease: 'none' })
         })
-          .fromTo(panel, { scale: 1, opacity: 1 }, { scale: 0.86, opacity: 0.55, duration: 0.9, ease: 'none' })
-          .to(panel, { opacity: 0, duration: 0.1, ease: 'none' })
-      })
+      }
     }, wrapperRef)
 
     // Recalculate pin positions after lazy siblings above have mounted & painted
@@ -505,13 +509,47 @@ const Projects = () => {
 
         /* ─── Mobile ─── */
         @media (max-width: 768px) {
-          .proj-slides-wrapper { padding: 0 4vw 4rem; }
-          .proj-slide { height: auto; min-height: calc(100vh - 80px); border-radius: 16px; }
+          .proj-slides-wrapper { padding: 0 4vw 2rem; }
+          .proj-slide { 
+            height: auto; 
+            min-height: auto; 
+            border-radius: 20px; 
+            margin-bottom: 30px; 
+            opacity: 1 !important; 
+            scale: 1 !important; 
+          }
           .proj-inner { grid-template-columns: 1fr; }
-          .proj-left  { border-right: none; border-bottom: 1px solid #f0f0f0; }
-          .proj-right { height: auto; overflow-y: visible; }
-          .proj-stats { grid-template-columns: repeat(2, 1fr); }
-          .proj-img   { height: 160px; }
+          .proj-left { 
+            border-right: none; 
+            border-bottom: 1px solid #f0f0f0; 
+            padding: 1.5rem;
+          }
+          .proj-img { height: 180px; }
+          .proj-num { font-size: 5rem; top: -1rem; right: 0.5rem; }
+          
+          .proj-right { 
+            height: auto; 
+            padding: 1.5rem; 
+            gap: 1.5rem;
+          }
+          .proj-cs-text {
+            -webkit-line-clamp: unset;
+            display: block;
+          }
+          .proj-stats { 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 10px;
+          }
+          .proj-results {
+            grid-template-columns: 1fr;
+          }
+          .proj-btns {
+            margin-top: 1rem;
+          }
+          .proj-btn {
+            width: 100%;
+            text-align: center;
+          }
         }
       `}</style>
       {/* Coming Soon Modal */}
